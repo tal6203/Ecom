@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      function print(msg) {
+        document.getElementById("result").innerHTML += `${msg} <br>`;
+      }
+      /// Ex1 ///
+      function printDay() {
+        let arr = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        document.getElementById(
+          "result"
+        ).innerHTML += `${arr}<br><br>${arr.sort()} `;
+      }
+      function sortArr(arr) {
+        if (typeof arr[0] == "string") {
+           print(arr.sort());
+        } else if (typeof arr[0] == "number") {
+           print(
+            arr.sort(function (a, b) {
+              return a - b;
+            })
+          );
+        }
+      }
+      /// Ex2 ///
+      function getValue(arr, i) {
+        return i > arr.length - 1 || i < 0
+          ? `Sorry, no value in the array for index number: ${i}`
+          : arr[i];
+      }
+      /// Ex3 ///
+      function arrOdds(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0) return "Not odds";
+        }
+        return "Odds";
+      }
+      /// Ex4 ///
+      function addFive(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < 10) {
+            arr[i] += 5;
+          }
+        }
+       print(arr);
+      }
+      /// Ex5 ///
+      function isFound(arr, num) {
+        for (let e of arr) {
+          if (e == num) {
+            return "found";
+          }
+        }
+        return "Not found";
+      }
+      /// Ex6 ///
+      function equal_first_last(arr, a, b) {
+        if (arr[0] == a && arr[arr.length - 1] == b) return true;
+        else return false;
+      }
+      /// Ex7 ///
+      function checkList(arr) {
+        let sm50 = arr.every((x) => x <= 50);
+        let between51To100 = arr.every((x) => x >= 51 && x <= 100);
+        let between101To200 = arr.every((x) => x >= 101 && x <= 200);
+        let higher201 = arr.every((x) => x >= 201);
+        return sm50
+          ? "smaller 50"
+          : between51To100
+          ? "Between 51 to 100"
+          : between101To200
+          ? "Between 101 to 200"
+          : higher201
+          ? "greater than 200"
+          : "No condition is happening";
+      }
+    </script>
+  </body>
+</html>

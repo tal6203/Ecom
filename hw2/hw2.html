@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+    <link rel="stylesheet" href="stylehw2.css">
+</head>
+<body>
+    <h1>HomeWork</h1>
+    <form action="#">
+    <label for="city">Choose a city:&nbsp;</label>
+    <select name="city" id="city">
+        <option value="tel-aviv">Tel-Aviv</option>
+        <option value="holon">Holon</option>
+        <option value="ashdod">Ashdod</option>
+      </select>
+      </form>
+      <hr>
+      <h1>My Form</h1>
+      <form action="#">
+        <label for="My_name">My name:&nbsp;</label>
+        <input type="text" id="My_name" name="My_name" maxlength="10" required><br><br>
+        <label for="My_password">My Password:&nbsp;</label>
+        <input type="password" id="My_password" name="My_password" required><br><br>
+        <label for="mail">My e-mail:&nbsp;</label>
+        <input type="email" id="mail" name="mail"required><br><br>
+        <button type="submit">Send</button>
+      </form>
+      <hr>
+      <h1>Tomato pasta bake</h1>
+      <p>Make this simple student <b>pasta and tomato</b> dish for delicious,filling and budget-friendly supper.
+      It is a great way to use up simple storecupboard ingredients.</p>
+      <h2>ingredients</h2>
+      <ul>
+        <li>1 tbsp olive oil</li>
+        <li>1 onion chopped</li>
+        <li>400g can cherry or chopped tomatoes</li>
+        <li>pinch sugar</li>
+      </ul>
+      <h2>Preparation</h2>
+      <ol>
+        <li>Heat the oil in a medium pan and fry the onion for 5 mins until softened and lightly golden.</li>
+        <li>Meanwhile,cook the pasta according to pack instructions. Heat the grill to high. Mix together the cheese and breadcrumbs.</li>
+        <li>Drain the pasta and stir into the sauce. Tip in the frankfurters and spoon into a heatproof dish.</li>
+      </ol>
+      <hr>
+      <h1>Let's go somewhere</h1>
+      <form name ="register" action="#" method="post" onsubmit="return checkForm()">
+        <label for="firstname">First name:&nbsp;</label>
+        <input id="firstname" name="firstname" type="text"  placeholder="Put your first name here" autofocus required/><br> <br>
+        <label for="family_name">Family name:&nbsp;</label>
+        <input id="family_name" name="family_name" type="text" placeholder="Put your family name here" required/><br> <br>
+        <label for="gender">Gender:&nbsp;</label>
+        <input id="gender" name="gender" type="radio" value="male" required>&nbsp;Male
+        <input id="gender" name="gender" type="radio" value="female" required>&nbsp;female <br> <br>
+        <label for="city">Choose a city:&nbsp;</label>
+        <select name="city" id="city">
+        <option value="tel-aviv">Tel-Aviv</option>
+        <option value="holon">Holon</option>
+        <option value="ashdod">Ashdod</option>
+        <option value="givatayim">Givatayim</option>
+      </select><br> <br>
+      <label for="min_date">Date to travel:<br>from:</label>
+      &nbsp;<input type="date" id="min_date" name="min_date" onchange="chengeclick()" required> &nbsp; 
+      <label for="max_date">To:</label>
+      &nbsp;<input type="date" id="max_date" name="max_date" required><br> <br>
+      <label for="deal">Give me deals for:</label><br> 
+      <input type="checkbox" id="kiev" name="deal" value="kiev">
+      <label for="kiev">Kiev</label><br>
+      <input type="checkbox" id="amsterdam" name="deal" value="amsterdam" >
+      <label for="amsterdam">Amsterdam</label><br>
+      <input type="checkbox" id="rome" name="deal" value="rome">
+      <label for="rome">Rome</label><br>
+      <input type="checkbox" id="london" name="deal" value="london">
+      <label for="london">London</label><br>
+      <span id = "alert"> </span>
+      <button type="submit" onclick="checkForm()">Send</button>
+      </form>
+      <hr>
+      <h1>Ecom Academy</h1>
+      <h2>Adress</h2>
+      <address>Holon <br> Givat Hatchmoshet 12</address>
+      <h2>Phone</h2>
+      <p>052-6812203</p>
+      <h2>Internet site</h2>
+      <a href="http://www.ecom.com">http://www.ecom.com</a>
+      <h2>Hours</h2>
+      <table>
+      <tr>
+        <th>-</th>
+        <th>Morning</b></th>
+        <th>Afternoon</th>
+      </tr>
+      <tr>
+         <td><b>Monday</b></td>
+         <td>Closed</td>
+         <td>13:30-17:30</td>
+      </tr>
+      <tr>
+        <td><b>Tuesday</b></td>
+        <td>08:30-12:15</td>
+        <td>13:30-17:30</td>
+      </tr>
+      <tr>
+        <td><b>Wednesday</b></td>
+        <td>08:30-12:15</td>
+        <td>13:30-17:30</td>
+      </tr>
+      <tr>
+        <td><b>Thursday</b></td>
+        <td>08:30-12:15</td>
+        <td>13:30-17:30</td>
+      </tr>
+      <tr>
+        <td><b>Friday</b></td>
+        <td>08:30-12:15</td>
+        <td>13:30-17:30</td>
+      </tr>
+      <tr>
+        <td><b>Saturday</b></td>
+        <td>09:00-12:00</td>
+        <td>Closed</td>
+      </tr>
+      <tr>
+        <td><b>Sunday</b></td>
+        <td>Closed</td>
+        <td>Closed</td>
+      </tr>
+      </table>
+      <hr>
+      <h1>Fortnite</h1>
+      <p>Fortnite is an online video game developed by Epic Games and released in 2017.It is available in three distinct game mode versions that otherwise 
+        share the same general gameplay and game engine:Fortnite: Save the World,<br>
+       a cooperative hybrid tower defense-shooter and survival game in which up to four players<br>
+        to fight off zombie-like creatures and defend objects with traps and fortifications they can build.
+      </p>
+      <h2>Characters</h2>
+      <table id="table">
+        <tr>
+          <th>Picture</th>
+          <th>Name</th>
+          <th>Date of birth</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td class="pic"><img src="war.png" width="20px" height="20px"></td>
+          <td>Emy</td>
+          <td>2000</td>
+          <td><button type="submit" onclick="ModifyRow(this)">Modify</button>&nbsp;<button type="submit" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td class="pic"><img src="war.png" width="20px" height="20px"></td>
+          <td>Ray</td>
+          <td>2001</td>
+          <td><button type="submit" onclick="ModifyRow(this)">Modify</button>&nbsp;<button type="submit" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <td class="pic"><img src="war.png" width="20px" height="20px"></td>
+          <td>Ramires</td>
+          <td>2003</td>
+          <td><button type="submit" onclick="ModifyRow(this)">Modify</button>&nbsp;<button type="submit" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+      </table>
+      <hr>
+      <table id="ex7" border="1px">
+        <tr>
+          <th id="mult">x</th>
+          <th class="bolt1">1</th>
+          <th class="bolt1">2</th>
+          <th class="bolt1">3</th>
+          <th class="bolt1">4</th>
+          <th class="bolt1">5</th>
+          <th class="bolt1">6</th>
+          <th class="bolt1">7</th>
+          <th class="bolt1">8</th>
+          <th class="bolt1">9</th>
+          <th class="bolt1">10</th>
+        </tr>
+        <tr>
+          <td class="bolt2">1</td>
+          <td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+        </tr>
+        <tr>
+          <td class="bolt2">2</td>
+          <td>2</td>
+          <td>4</td>
+					<td>6</td>
+					<td>8</td>
+					<td>10</td>
+					<td>12</td>
+					<td>14</td>
+					<td>16</td>
+					<td>18</td>
+					<td>20</td>
+        </tr>
+        <tr>
+          <td class="bolt2">3</td>
+          <td>3</td>
+          <td>6</td>
+					<td>9</td>
+					<td>12</td>
+					<td>15</td>
+					<td>18</td>
+					<td>21</td>
+					<td>24</td>
+					<td>27</td>
+					<td>30</td>
+        </tr>
+        <tr>
+          <td class="bolt2">4</td>
+          <td>4</td>
+          <td>8</td>
+					<td>12</td>
+					<td>16</td>
+					<td>20</td>
+					<td>24</td>
+					<td>28</td>
+					<td>32</td>
+					<td>36</td>
+					<td>40</td>
+        </tr>
+        <tr>
+          <td class="bolt2">5</td>
+          <td>5</td>
+          <td>10</td>
+					<td>15</td>
+					<td>20</td>
+					<td>25</td>
+					<td>30</td>
+					<td>35</td>
+					<td>40</td>
+					<td>45</td>
+					<td>50</td>
+        </tr>
+        <tr>
+          <td class="bolt2">6</td>
+          <td>6</td>
+          <td>12</td>
+					<td>18</td>
+					<td>24</td>
+					<td>30</td>
+					<td>36</td>
+					<td>42</td>
+					<td>48</td>
+					<td>54</td>
+					<td>60</td>
+        </tr>
+        <tr>
+          <td class="bolt2">7</td>
+          <td>7</td>
+          <td>14</td>
+					<td>21</td>
+					<td>28</td>
+					<td>35</td>
+					<td>42</td>
+					<td>49</td>
+					<td>56</td>
+					<td>63</td>
+					<td>70</td>
+        </tr>
+        <tr>
+          <td class="bolt2">8</td>
+          <td>8</td>
+          <td>16</td>
+					<td>24</td>
+					<td>32</td>
+					<td>40</td>
+					<td>48</td>
+					<td>56</td>
+					<td>64</td>
+					<td>72</td>
+					<td>80</td>
+        </tr>
+        <tr>
+          <td class="bolt2">9</td>
+          <td>9</td>
+          <td>18</td>
+					<td>27</td>
+					<td>36</td>
+					<td>45</td>
+					<td>54</td>
+					<td>63</td>
+					<td>72</td>
+					<td>81</td>
+					<td>90</td>
+        </tr>
+        <tr>
+          <td class="bolt2">10</td>
+          <td>10</td>
+          <td>20</td>
+					<td>30</td>
+					<td>40</td>
+					<td>50</td>
+					<td>60</td>
+					<td>70</td>
+					<td>80</td>
+					<td>90</td>
+					<td>100</td>
+        </tr>
+      </table>
+      <script>
+        var min_date = new Date();
+        var year = min_date.getFullYear();
+        var month =min_date.getMonth() + 1;
+        var day = min_date.getDate();
+        if (day < 10) {
+          day = "0" + day;
+        }
+        if (month < 10) {
+          month = "0" + month;
+        }
+         min_date=year+'-'+month+'-'+day;
+       document.getElementById("min_date").setAttribute("min", min_date);
+       function chengeclick(){
+       var x = document.getElementById("min_date").value;
+        document.getElementById("max_date").setAttribute("min",x);
+       }      
+        function checkForm(){
+                var x = Date.parse(document.getElementById("min_date").value);
+                var y = Date.parse(document.getElementById("max_date").value);
+                if(x>y){
+                  document.getElementById("alert").innerHTML=("Check the dates again!<br>");
+                  return false;
+                 }
+
+        var deal = document.getElementsByName("deal");
+        for (let i = 0; i < deal.length; i++){
+                 if (deal[i].checked == true){
+                  document.getElementById("alert").innerHTML=("");
+                  return true;
+                 }
+                }
+                document.getElementById("alert").innerHTML=("You must select at least one deal <br>");
+                return false;                   
+              }
+              function deleteRow(btn_del) {
+                   var row = btn_del.parentNode.parentNode;
+                         row.parentNode.removeChild(row);
+              }   
+                  function ModifyRow(bt_modify){
+                   var tr = bt_modify.parentNode.parentNode;
+                   var input_name=prompt("Enter a new Name:");
+                   var input_DateOfBirth = prompt("Enter a new Date of birth:")
+                   tr.getElementsByTagName("td")[1].innerHTML=input_name;
+                   tr.getElementsByTagName("td")[2].innerHTML=input_DateOfBirth;
+                  }
+                
+
+      </script>
+</body>
+</html>

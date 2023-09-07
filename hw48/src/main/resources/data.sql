@@ -1,0 +1,1 @@
+insert into book(title,pages,author,price) VALUES ('Spring boot in Action',471,'Craig Walls',150);

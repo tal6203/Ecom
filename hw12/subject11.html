@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      let arr = [1, 2, 3];
+      arr.unshift(4);
+      arr.unshift(5);
+      arr.shift();
+      arr.sort();
+      arr.reverse();
+      let list1 = [8, 7, 3, 21, 32];
+      for (let i = 0; i < list1.length; i++) {
+        document.getElementById("result").innerHTML += ` ${i}`;
+      }
+
+      document.getElementById("result").innerHTML += `<br>${list1.filter((e) => {
+        return e % 4 == 0;
+      })}`;
+
+      let list2 = [4, 2, 8, 6, 10];
+      document.getElementById("result").innerHTML += `<br>${list2.includes(5)}`;
+    </script>
+  </body>
+</html>

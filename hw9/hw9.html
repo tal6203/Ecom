@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork#9</title>
+  </head>
+  <body>
+    <button onclick="Targil1()">Targil#1</button>
+    <button onclick="Targil2()">Targil#2</button>
+    <button onclick="Targil3()">Targil#3</button>
+    <button onclick="Targil4()">Targil#4</button>
+    <button onclick="Targil5()">Targil#5</button>
+    <button onclick="Targil6()">Targil#6</button>
+    <button onclick="Targil7()">Targil#7</button>
+    <button onclick="Targil8()">Targil#8</button>
+    <span id="result" style="font-weight:border ; font-size: 30px; font-family: fantasy; "></span>
+    <script>
+      function Targil1() {
+        let sum = 0;
+        let num = parseInt(prompt("Enter a number [enter -99 to exit]"));
+        while (true) {
+          if (num == -99) {
+            break;
+          } else if (num >= 0) {
+            sum = sum + num;
+          }
+          num = parseInt(prompt("Enter a number [enter -99 to exit]"));
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br>Targil#1:(The sum is: ${sum})`;
+      }
+      function Targil2() {
+        let num1 = parseInt(prompt("Enter a number:"));
+        let new_num = reverseNum(num1);
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br>Targil#2:(The reverse of number is: ${new_num})`;
+      }
+      function Targil3() {
+        let num2 = parseInt(prompt("Enter a number:"));
+        let checkNum = reverseNum(num2);
+        if (num2 == checkNum) {
+          document.getElementById("result").innerHTML =
+            "<br>Targil#3:(Palindrome)";
+        } else {
+          document.getElementById("result").innerHTML =
+            "<br>Targil#3:(Not Palindrome)";
+        }
+      }
+      function reverseNum(x) {
+        let num1 = x;
+        let new_num = 0;
+        while (num1 != 0) {
+          new_num = new_num * 10;
+          new_num = new_num + (num1 % 10);
+          num1 = Math.floor(num1 / 10);
+        }
+        return new_num;
+      }
+      function Targil4() {
+        let col = parseInt(prompt("Enter a columns:"));
+        let row = parseInt(prompt("Enter a rows:"));
+        let rectangle = "";
+        for (let i = 1; i <= row; i++) {
+          for (let j = 1; j <= col; j++) {
+            rectangle = rectangle + "0";
+          }
+          rectangle = rectangle + "<br>";
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br>Targil#4 The rectangle is:<br>${rectangle}`;
+      }
+      function Targil5() {
+        let index = parseInt(prompt("Enter a number:"));
+        let sum = 0;
+        let num1 = 1;
+        let num2 = 1;
+        for (let i = 3; i <= index; i++) {
+          sum = num1 + num2;
+          num1 = num2;
+          num2 = sum;
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br>The number of the ${index} is: ${sum}`;
+      }
+      function Targil6() {
+        let num1 = parseInt(prompt("Enter a number:"));
+        let num2 = parseInt(prompt("Enter a number:"));
+        let div = 1;
+        for (let i = 2; i < Math.min(num1, num2); i++) {
+          if (num1 % i == 0 && num2 % i == 0) {
+            div = i;
+          }
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br>The highest divisor of the number ${num1} and ${num2} is: ${div}`;
+      }
+      function Targil7() {
+        let num = parseInt(prompt("Enter a number"));
+        let save_num = num;
+        let str = "1";
+        for (let i = 2; i <= num; i++) {
+          while (true) {
+            if (num % i != 0) {
+              break;
+            }
+            num = num / i;
+            str = str + ` X ${i}`;
+          }
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br> ${str} = ${save_num}`;
+      }
+      function Targil8() {
+        let num = parseInt(prompt("Enter a number"));
+        let save_num = num;
+        let str = "";
+        for (let i = 0; i < 10; i++) {
+          while (num != 0) {
+            if (i == num % 10) {
+              str = str + (num % 10);
+            }
+            num = Math.floor(num / 10);
+          }
+          num = save_num;
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `<br>Tne new number of ${save_num} is: ${str}`;
+      }
+    </script>
+  </body>
+</html>

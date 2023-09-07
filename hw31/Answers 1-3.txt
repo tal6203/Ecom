@@ -1,0 +1,5 @@
+1. class is a template used to create objects and to define object data types and methods.
+
+2. instance is a specific realization of any object. An object may be different in several ways, and each realized variation of that object is an instance
+
+3. ()nameclass nameinstance = new nameclass

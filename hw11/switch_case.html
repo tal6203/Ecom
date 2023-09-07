@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      function print(msg) {
+        document.getElementById("result").innerHTML += msg;
+      }
+      /// Ex1 ///
+      function checkEven(num) {
+        switch (true) {
+          case num % 2 == 0:
+            return "Even";
+          default:
+            return "Odd";
+        }
+      }
+      /// Ex2 ///
+      function check_pos_neg(num) {
+        switch (true) {
+          case num >= 0:
+            return "Positive";
+          default:
+            return "Negative";
+        }
+      }
+      /// Ex3 /// 
+      function checkDayInWeek(num) {
+        switch (num) {
+          case 1:
+            return "Sunday";
+          case 2:
+            return "Monday";
+          case 3:
+            return "Tuesday";
+          case 4:
+            return "Wednesday";
+          case 5:
+            return "Thursday";
+          case 6:
+            return "Friday";
+          case 7:
+            return "Saturday";
+          default:
+            return "please enter another number";
+        }
+      }
+      /// Ex4 ///
+      function checkMonth(month) {
+        switch (month) {
+          case 1:
+            return "January";
+          case 2:
+            return "February";
+          case 3:
+            return "March";
+          case 4:
+            return "April";
+          case 5:
+            return "May";
+          case 6:
+            return "June";
+          case 7:
+            return "July";
+          case 8:
+            return "August";
+          case 9:
+            return "September";
+          case 10:
+            return "October";
+          case 11:
+            return "November";
+          case 12:
+            return "December";
+          default:
+            return "please enter another number";
+        }
+      }
+      /// Ex5 ///
+      function checkLetter(letter) {
+        switch (letter) {
+          case "a":
+            return "vowel";
+          case "e":
+            return "vowel";
+          case "i":
+            return "vowel";
+          case "o":
+            return "vowel";
+          case "u":
+            return "vowel";
+          case "y":
+            return "vowel";
+          default:
+            return "consonant";
+        }
+      }
+      /// Ex6 ///
+      function checkNumber(num) {
+        switch (true) {
+          case num >= 0 && num <= 20:
+            return "D";
+          case num >= 21 && num <= 55:
+            return "C";
+          case num >= 56 && num <= 70:
+            return "B";
+          case num >= 71 && num <= 90:
+            return "A";
+          case num >= 91 && num <= 100:
+            return "+A";
+          default:
+            return "Your number must between 0 to 100";
+        }
+      }
+      /// Ex7 ///
+      function cal(num1, num2, num3) {
+        switch (num3) {
+          case 1:
+            return num1 + num2;
+          case 2:
+            return num1 - num2;
+          case 3:
+            return num1 / num2;
+          case 4:
+            return num1 * num2;
+        }
+      }
+    </script>
+  </body>
+</html>

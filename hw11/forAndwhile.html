@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      function print(msg) {
+        document.getElementById("result").innerHTML += msg;
+      }
+      /// Ex1 ///
+      function printNumber() {
+        for (let i = 0; i < 11; i++) {
+          document.getElementById("result").innerHTML += `${i} `;
+        }
+      }
+      /// Ex2 ///
+      function deleteElement(arr, item) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === item) {
+            arr.splice(i, 1);
+            i--;
+          }
+        }
+        return arr;
+      }
+      /// Ex3 ///
+      function checkOddAndEven(arr) {
+        const checkList = { count_odd: 0, count_even: 0 };
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0) {
+            checkList.count_even++;
+          } else {
+            checkList.count_odd++;
+          }
+        }
+        return `This is the number of even: ${checkList.count_even} <br>
+            This is the number os odd: ${checkList.count_odd}`;
+      }
+      /// Ex4 /// //
+      //1.
+      function findDup(arr) {
+        let result = {};
+        for (e of arr) {
+          if (result[e] == undefined) {
+            result[e] = 1;
+          } else {
+            result[e] += 1;
+          }
+        }
+        for (e in result) {
+          if (result[e] == 1) {
+            delete result[e];
+          }
+        }
+        return JSON.stringify(result, null, 4);
+      }
+      //2. (second option)
+      function findDup(arr) {
+        let result = {};
+        let azer = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (!azer.includes(arr[i])) {
+            azer.push(arr[i]);
+            let counter = arr.filter((ele) => ele === arr[i]).length;
+            if (counter > 1) {
+              result[arr[i]] = counter;
+            }
+          }
+        }
+        return JSON.stringify(result, null);
+      }
+      /// Ex5 ///
+      //1.
+      function printNum20() {
+        for (let i = 1; i < 21; i++) {
+          document.getElementById("result").innerHTML += `${i} <br>`;
+        }
+      }
+      //2.
+      function printOdd() {
+        for (let i = 3; i < 30; i++) {
+          if (i % 2 != 0) {
+            document.getElementById("result").innerHTML += `${i} <br>`;
+          }
+        }
+      }
+      //3.
+
+      function printEven() {
+        for (let i = 20; i > 0; i -= 2) {
+          document.getElementById("result").innerHTML += `${i} <br>`;
+        }
+      }
+      //4.
+      function printMulti3() {
+        for (let i = 50; i > 19; i--) {
+          if (i % 3 == 0) {
+            document.getElementById("result").innerHTML += `${i} <br>`;
+          }
+        }
+      }
+      /// Ex6 ///
+      //1 - 2
+      function ex6() {
+        let str = "LaunchCode";
+        let arr = [1, 5, "LC101", "blue", 42];
+        for (let i = 0; i < arr.length; i++) {
+          document.getElementById("result").innerHTML += `${arr[i]} <br>`;
+        }
+        for (let j = str.length - 1; j >= 0; j--) {
+          document.getElementById("result").innerHTML += `${str[j]} <br>`;
+        }
+      }
+      /// Ex7 ///
+      function hello10() {
+        let counter = 0;
+        while (counter < 10) {
+          document.getElementById("result").innerHTML += "Hello ";
+          counter++;
+        }
+      }
+      /// Ex8 ///
+      function sumOf(arr, num) {
+        let sum = 0;
+        let index = 0;
+        while (sum < num) {
+          let nextSum = sum + arr[index];
+          if (nextSum >= num) break;
+          else sum = nextSum;
+
+          index++;
+        }
+        return sum;
+      }
+      /// Ex9 ///
+      function arrBool(arr) {
+        let index = 0;
+        while (arr[index]) {
+          if (index == arr.length - 1) {
+            return "All the values in array is true";
+          }
+          index++;
+        }
+        return index;
+      }
+      /// Ex10 ///
+      function checkHello(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == "Hello" && i % 2 != 0) {
+            return i;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

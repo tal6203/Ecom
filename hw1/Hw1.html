@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //הוספת אלמנטים ל DOM
+     function AddSing(){
+        var new_li = document.createElement("li");
+        var new_sing = document.getElementById("adds");
+        new_li.innerHTML=new_sing.value;
+        //document.getElementById("list").appendChild(new_li);
+     var the_li = document.getElementById("list").getElementsByTagName("li")[2];
+     document.getElementById("list").insertBefore(new_li,the_li);
+    }
+    </script>
+</head>
+<body style="background-color: burlywood;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h1>ex 1-2</h1>
+    <div style="border-color: blue;border-style:solid ; margin-right: 60%;">
+    <h1>Hello, my name is John</h1>
+    <h2>Hello, my name is John</h2>
+    <h3>Hello, my name is John</h3> 
+    <h4>Hello, my name is John</h4>
+    <h5>Hello, my name is John</h5>
+    </div>
+    <i id ="date">
+        <script>
+            var date = new Date ();
+            var year = date.getFullYear ();
+            var month = date.getMonth ()+1;
+            var day = date.getDate();
+            document.getElementById("date").innerHTML= day+"/"+month+"/"+year;
+        </script>
+    </i>
+    <p style="border-color: blue;border-style:solid ;margin-right: 30%;">
+    Lorem Ipsum is <b>simply dummy text of the printing and typesetting industry.</b><br>
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown<br>
+    printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <h1>ex 3-4</h1>
+    <a href="http://www.google.com"><img src="sun.png" alt="It's a sunny day" title="sun" width="200" height="200"></a>
+    <a href="http://www.youtube.com"><img src="rain.jpg" alt="We can expect rainy weather tomorrow" title="rain" width="200" height="200"></a>
+    <a href="http://ynet.co.il"><img src="storm.jpg" alt="He braved the stormy weather" title="storm" width="200" height="200"></a>
+    <a href="https://www.ecomschool.co.il"><img src="umbrella.webp" alt="It was so windy my umbrella turned inside out" title="umbrella" width="200" height="200"></a> 
+    <!--
+        <h1>ex 5</h1> 
+        <body>
+            <h1> My favorite cocktails <b> are </b> </h1>
+            <p>Mojito </p>
+            <p> Gin Fizz </p>
+            <p> Long Island Tea </p>
+        </body>
+    --> 
+    <h1>ex6</h1>
+    <h1>Adam Levine</h1>
+    <h3>Biographie</h3>
+    <img src="adam_levine.jpg" alt="adam levine" title="adam levine" width="130" height="130">
+    <a href="https://en.wikipedia.org/wiki/Adam_Levine">Link to wikipedia</a>
+    <p>Adam Noah Levine (born March 18, 1979) is an American singer, songwriter and musician, who is the lead vocalist and rhythm guitarist of the pop rock band Maroon 5.<br>
+       Levine began his musical career in 1994 with the band Kara's Flowers, of which he was the lead vocalist and lead guitarist.
+    </p>
+    <hr>
+    <h3>Songs:</h3>
+    <ul id="list">
+        <li>Payphone</li>
+        <li>Memories</li>
+        <li>girls like you</li>
+        <li>Animals</li>
+    </ul>
+    הוסף שיר:<input id="adds" type="text" value=""><br>
+    <button id="bt1" onclick="AddSing()">הוסף שיר</button>
+    <hr>
+    <h3>Albums:</h3>
+    <ul>
+        <li>Singles</li>
+        <li>Red pill blues</li>
+        <li>Jordi</li>
+    </ul>
+    <hr>
+    <video width="320px" height="320px" controls>
+        <source src="Gym Class Heroes- Stereo Hearts ft. Adam Levine [OFFICIAL VIDEO].mp4" type="video/mp4">
+    </video>
+    <h1>ex7</h1>
+    <footer>tal abutbul<br>
+    tal6203@gmail.com
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+.bigger {
+font-size: 48px;
+color: red;
+background-color: yellow;
+display: inline;
+}
+.the_smaller {
+font-size: 15px;
+color: black;
+}
+a {
+text-decoration: none;
+}
+.del {
+text-decoration: line-through;
+}
+.info_telaviv {
+text-transform: uppercase;
+text-align: center;
+}
+.biv_dog {
+background-color: darkblue;
+color: white;
+text-align: center;
+margin-left: 25%;
+margin-right: 25%;
+}
+
+.dog_img {
+border: 3px solid white;
+border-radius: 10px;
+width: 400px;
+height: 200px;
+padding: 20px;
+margin-bottom: 30px;
+}
+
+.img_div{
+background-image: url("stars.jpg");
+background-size: cover;
+display: flex;
+align-items: center;
+height: 300px;
+width: 600px;
+}
+.jupiter{
+background-image: url("Jupiter.jpg");
+background-size: cover;
+height: 60px;
+width: 60px;
+border-radius: 55%;
+margin-left: 10%;
+}
+.earth{
+background-image: url("Earth.jpg");
+background-size: cover;
+height: 125px;
+width: 125px;
+border-radius: 100%;
+margin-left: 10%;
+}
+.madim{
+background-image: url("madim.jpg");
+background-size: cover;
+height: 170px;
+width: 170px;
+border-radius: 100%;
+margin-left: 10%;
+}
+.stars {
+background-image: url("stars_pic.avif");
+background-size: cover;
+width:400px;
+height: 300px; 
+
+}
+.first_star{
+float: right;
+width: 30px;
+height: 30px;
+background-color: white;
+border-radius: 50%;
+margin-right: 20%;
+margin-top: 7%;
+}
+.sec_star{
+margin-top: 10%;
+margin-left:40%  ;
+margin-right:10%  ;
+width: 100px;
+height: 100px;
+background-color: white;
+border-radius: 50%;
+}
+.third_star{
+width: 60px;
+height: 60px;
+background-color: white;
+border-radius: 50%;
+margin-left: 20%;
+
+}
+.black_div{
+height: 30px;
+width: 30px;
+background-color: black;
+}
+.red_div{
+height: 30px;
+width: 30px;
+background-color: red;
+
+}
+.white_div{
+width: 30px;
+height: 30px;
+background-color: white;
+
+}
+table{
+border-collapse:collapse;
+}
+td{
+    padding: 0%;
+}

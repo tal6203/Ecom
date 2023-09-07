@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-family: fantasy">
+    string 1: <input id="str1" type="text" /> string 2:
+    <input id="str2" type="text" />
+    <button type="button" onclick="concatenation()">concatenation</button>
+    <button type="button" onclick="combination()">combination</button>
+    <button type="button" onclick="reverseStr1()">Revers string 1</button>
+    <button type="button" onclick="secCombin()">
+      The second letter combination
+    </button>
+    <p id="result" style="font-size: 30px"></p>
+
+    <script>
+      function concatenation() {
+        let str1 = document.getElementById("str1").value;
+        let str2 = document.getElementById("str2").value;
+        document.getElementById(
+          "result"
+        ).innerHTML = `The length of first string is: ${str1.length}<br>
+            The length of second string is: ${str2.length}<br>
+            The combination is: ${str1 + str2 + str1}`;
+      }
+      function combination() {
+        let str1 = document.getElementById("str1").value;
+        let str2 = document.getElementById("str2").value;
+        let index = 0;
+        let shortStr = "";
+        let longStr = "";
+        let newStr = "";
+        if (str1.length >= str2.length) {
+          shortStr = str2;
+          longStr = str1;
+        } else {
+          shortStr = str1;
+          longStr = str2;
+        }
+        for (let i = 0; i < longStr.length; i++) {
+          if (index == shortStr.length) {
+            index = 0;
+          }
+          newStr = newStr + longStr[i] + shortStr[index];
+          index++;
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `The new string is: ${newStr}`;
+      }
+      function reverseStr1() {
+        let str1 = document.getElementById("str1").value;
+        document.getElementById(
+          "result"
+        ).innerHTML = `The reverse string 1 is: ${str1
+          .split("")
+          .reverse()
+          .join("")}`;
+      }
+      function secCombin() {
+        let str1 = document.getElementById("str1").value;
+        let str2 = document.getElementById("str2").value;
+        document.getElementById(
+          "result"
+        ).innerHTML = `The second letter combination is: ${str1[1] + str2[1]}`;
+      }
+    </script>
+  </body>
+</html>

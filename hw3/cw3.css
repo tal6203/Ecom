@@ -1,0 +1,72 @@
+body{
+  background-color:steelblue;
+}
+.container {
+    border-top: 5px dashed red;
+    border-left: 5px dashed purple;
+    border-right: 5px dashed green;
+    border-bottom: 5px dashed blue;
+    width: 470px;
+    height: 148px;
+    margin: 0%;
+    border-radius: 25px;
+    padding: 2px;
+  }
+  .myh1 {
+    background-color: gainsboro;
+    color: green;
+    font-weight: bolder;
+    margin: 0%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .mypar1 {
+    background-color: coral;
+    color: yellow;
+    margin: 0%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-bottom: 5px;
+    
+  }
+  .myh1:hover {
+    background-color: yellow;
+    color: black;
+  }
+  .con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    height: 200px;
+  }
+  .con> .first_div {
+    background-color: yellow;
+    border: 2px solid;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    width: 100px;
+  }
+  .con > .second_div {
+    background-color: yellow;
+    border: 2px solid;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    width: 100px; 
+  }
+  .con > .third_div {
+    background-color: yellow;
+    border: 2px solid;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    width: 100px;
+  }
+  .con > .third_div > ul {
+    background-color: blue;
+    border: 4px solid red;
+    margin-top: 0%;
+    align-items: center;
+  }

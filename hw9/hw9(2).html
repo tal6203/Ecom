@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="Targil9()">Targil#9</button>
+    <button onclick="Targil10()">Targil#10</button>
+    <button onclick="Targil11()">Targil#11</button>
+    <button onclick="Targil12()">Targil#12</button>
+    <script>
+      function Targil9() {
+        document.write(`<center><table border='1px'>`);
+        for (let a = 1; a < 21; a++) {
+          document.write(`<tr style='height:40px'>`);
+          for (let b = 1; b < 21; b++) {
+            document.write(
+              `<td style='width:40px'><center><font size='4'> ${
+                a * b
+              } </center></font></td>`
+            );
+          }
+          document.write(`</tr>`);
+        }
+        document.write(`</table></center>`);
+      }
+      function Targil10() {
+        let save_name = "";
+        let higher_salary = 0;
+        let save_month = 0;
+        for (let i = 1; i <= 200; i++) {
+          let worker = prompt("Enter a worker name:");
+          for (let j = 1; j <= 12; j++) {
+            let salary = parseInt(prompt(`Enter a salary of ${worker} in month ${j} :`));
+            if (salary > higher_salary) {
+              higher_salary = salary;
+              save_month = j;
+              save_name = worker;
+            }
+          }
+        }
+        document.write(`${save_name} is the worker who earned the most ${higher_salary} in month ${save_month}`);
+      }
+      function Targil11() {
+        let sum = 1;
+        for (let i = 1; i <= 100; i++) {
+          let num = parseInt(prompt("Enter a number"));
+          for (let j = 1; j <= num; j++) {
+            sum = sum * j;
+          }
+          document.write(`The azret of ${num} is: ${sum}<br>`);
+          sum = 1;
+        }
+      }
+      function Targil12() {
+        let avg_student = 0;
+        let avg_school = 0;
+        for (let i = 1; i <= 100; i++) {
+          for (let j = 1; j <= 10; j++) {
+            let Grade = parseInt(prompt(`Enter a Grade ${j} of a student number ${i} :`));
+            avg_student = avg_student + Grade;
+            avg_school = avg_school + Grade;
+          }
+          document.write(`The average of student ${i} = ${Math.floor(avg_student / 10)}<br>`);
+          avg_student = 0;
+        }
+        document.write(`The average of school is :${Math.floor(avg_school / 1000)}`);
+      }
+    </script>
+  </body>
+</html>

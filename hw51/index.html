@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        state = {
+          mouse_x: 0,
+          mouse_y: 0,
+          form_input: {
+            age: 30,
+            name: "itay",
+            vagetarian: "",
+            birthday: "",
+            country: "",
+            gender: "",
+          },
+        };
+        handleSubmit = (e) => {
+          e.preventDefault();
+
+          // change on submit
+          this.setState({
+            form_input: {
+              name: document.getElementById("input_name").value,
+              birthday: document.getElementById("input_birthday").value,
+              country: document.getElementById("input_country").value,
+              vagetarian : this.isChecked(document.getElementsByName("input_vagetarian")),
+              gender : this.isChecked(document.getElementsByName("input_gender"))
+            }
+            
+          });
+        };
+
+        isChecked = (element) =>{
+            if(element[0].checked){
+                return element[0].value;
+            }
+            else if(element[1].checked){
+                return element[1].value;
+            }
+        }
+
+
+        clickHandler = (event) => {
+          alert("Double Clicked");
+        };
+
+        handleMouseOver = (e) => {
+          console.log(
+            `(${this.state.mouse_x + e.pageX}, ${this.state.mouse_y + e.pageY})`
+          );
+          this.setState({
+            mouse_x: this.state.mouse_x + e.pageX,
+            mouse_y: this.state.mouse_x + e.pageY,
+          });
+        };
+        render() {
+
+          return (
+            <div className="app-content">
+              <h1>Hello World!!</h1>
+              <p>
+                My name is <b>{this.state.form_input.name}</b> and my age is{" "}
+                <b>{this.state.form_input.age}</b>
+              </p>
+              <hr />
+              <button onDoubleClick={this.clickHandler}>Click me</button>
+              <button
+                onMouseOver={this.handleMouseOver}
+                style={{
+                  height: this.state.mouse_x,
+                  width: this.state.mouse_y,
+                }}
+              >
+                detect x,y
+              </button>
+
+              <form onSubmit={this.handleSubmit}>
+                <p>
+                  Name:
+                  <input
+                    type="text"
+                    id="input_name"
+                    //   onChange={this.handleChange}
+                    //   value={this.state.form_input.name}
+                    required
+                  />
+                  <br />
+                  <br />
+                  Vagetarian:
+                  <input name="input_vagetarian" type="checkbox" value="Yes" />
+                  Yes
+                  <input name="input_vagetarian" type="checkbox" value="No" />
+                  No
+                  <br />
+                  <br/>
+                  Birthday: <input id="input_birthday" type="date" required/>
+                  <br />
+                  <br />
+                  choose a country:
+                  <select name="countries" id="input_country">
+                    <option value="Israel">Israel</option>
+                    <option value="USA">USA</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Russia">Russia</option>
+                  </select>
+                  <br />
+                  <br />
+                  Gender: Male<input type="radio" name="input_gender" value="Male" required/>&nbsp; Female<input type="radio" name="input_gender" value="Female" required/>
+                </p>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<App />, document.getElementById("app"));
+
+      // for fun
+      const elem = <h1>Hello World!</h1>;
+    </script>
+  </body>
+</html>

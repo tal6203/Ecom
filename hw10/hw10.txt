@@ -1,0 +1,30 @@
+1. create an HTML page with 2 text box (input type text) + button
+   when clicking the button print:
+      i.e. first-text-box is : abcd 
+           second-text-box is: efgh
+   length of the string in the first text box. i.e 4
+   length of the string in the second text box. i.e. 4
+   this combination: first-textbox + second-textbox + first-textbox i.e. abcdefghacbd
+   merge letters combination: i.e. aebfcgdh 
+        (*bonus if second word is shorter then round-robin from the start)
+   first-textbox-reverse. i.e. dcba
+   second letter from first-textbox + second-textbox. i.e. bf
+
+2. create an HTMl page with text box (input type number) + button
+   start an empty list (i.e. const list1 = [])
+   when clicking the button:
+     if the number inside the text box is positive add it to the right-side of the list 
+     if the number inside the text box is negative add it to the left-side of the list 
+     if the number inside the text box is zero then empty the list (hint: loop and pop until empty)
+   after each button click print the list 
+   add another button, when clicking it the program will check how many times the 
+      number inside the text box appears in the list 
+        for example if the number inside the text box is 3
+        and the list looks like this: -5, -3, 2, 3, 2, 3
+        then 2 will be printed (because 3 appears two times inside the list)
+   *bonus: add a button which sorts the list (hint: use sort())
+
+3. create a selector with colors [i.e. red, blue, green]
+   add a button 
+   add a text 'HELLO JAVA SCRIPT' (i.e. in paragraph)
+   whenever the user clicks the button, draw the text in the selected color

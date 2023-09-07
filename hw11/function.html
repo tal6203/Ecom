@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      const number1 = 5; //  global variables for ex 8 !!
+      function print(msg) {
+        document.getElementById("result").innerHTML += msg;
+      }
+      /// Ex1 ///
+      //1.
+      function whoIsBigger(a, b) {
+        return a > b ? a : b;
+      }
+      //2.
+      function equal(a, b) {
+        return a == b ? a + 1 : "Not Equal";
+      }
+      //3.
+      function checkSmaller(a, b, x, y) {
+        let arr = [a, b, x, y];
+        let check = arr.find((x) => x >= 1 && x <= 5);
+        if (check) return -1;
+        else return Math.min.apply(null, arr);
+      }
+
+      //4.
+      function even(num) {
+        return num % 2 == 0 ? "Even" : "Not even";
+      }
+      //5.
+      function checkAllEqual(a, b, x, y) {
+        if (a == b && b == x && x == y) return "All equal";
+        else if (a == b || x == y || a == y || b == x || a == x || b == y)
+          return "only 2 numbers are equals";
+        else return "All numbers not equals";
+      }
+      //6.
+      function checkDay(day) {
+        const arr = [
+          "",
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        if (day <= 0 || day >= 8) return "Error";
+        else return arr[day];
+      }
+      //7.
+      function checkDayInMonth(month) {
+        if (month <= 0 || month >= 13) return -1;
+        else {
+          let date = new Date();
+          let day = new Date(date.getFullYear(), month, 0).getDate();
+          return day;
+        }
+      }
+      // 8 (global variables) - 9 (local variables)
+      function sumOfNumber() {
+        let sum = 0;
+        for (let i = 1; i <= number1; i++) {
+          sum = sum + i;
+        }
+        return sum;
+      }
+    </script>
+  </body>
+</html>

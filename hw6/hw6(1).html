@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2>targil 1</h2>");
+      firstNum = parseInt(prompt("Enter first number:"));
+      sec_num = parseInt(prompt("Enter secend number:"));
+      if (sec_num > firstNum) {
+        document.write("Growing");
+      }
+
+      document.write("<h2>targil 2</h2>");
+      num1 = parseInt(prompt("Enter first number:"));
+      num2 = parseInt(prompt("Enter secend number:"));
+      if (num1 != num2) {
+        if (num1 > num2) {
+          document.write(`The biggest is: ${num1}`);
+        } else {
+          document.write(`The biggest is: ${num2}`);
+        }
+      } else {
+        document.write(`The numbers is equals: ${num1}`);
+      }
+      document.write("<h2>targil 3</h2>");
+      num = parseInt(prompt("Enter number:"));
+      debugger;
+      if (num % 2 == 0) {
+        document.write("Even");
+      } else {
+        document.write("Odd");
+      }
+      document.write("<h2>targil 4</h2>");
+      num3 = parseInt(prompt("Enter number:"));
+      num4 = parseInt(prompt("Enter number:"));
+      if (num3 % num4 == 0) {
+        document.write(`The first is divided by the second ${num3/num4}`);
+      } else {
+        if (num4 % num3 == 0) {
+          document.write(`The second is divided by the first${num4/num3}`);
+        } else {
+          document.write("The numbers are not at all divisible by each other");
+        }
+      }
+      /*secend option
+      document.write("<h2>targil 4</h2>");
+    if(num3 % num4 !=0 && num4 % num3 !=0){
+      document.write("The numbers are not at all divisible by each other");
+    }
+    else{
+      document.write(`The first is divided by the second => ${num3 % num4 === 0}<br>`);
+      document.write(`The second is divided by the first => ${num4 % num3 === 0}`);
+    }
+    */
+      document.write("<h2>targil 5</h2>");
+      num5 = parseInt(prompt("Enter number:"));
+      num6 = parseInt(prompt("Enter number:"));
+      if (num5 != num6) {
+        if (num5 > num6) {
+          document.write(`The small number: ${num6}<br>`);
+          document.write(`The biggest number: ${num5}`);
+        } else {
+          document.write(`The small number: ${num5}<br>`);
+          document.write(`The biggest number: ${num6}`);
+        }
+      } else {
+        document.write(`The numbers is equals: ${num5} = ${num6}`);
+      }
+
+      document.write("<h2>targil 6</h2>");
+      salary = parseInt(prompt("Enter a salary:"));
+      if (salary <= 5400) {
+        document.write(`10% salary increase: ${(salary = salary + (salary * 10) / 100)}`);
+      } else {
+        document.write(`5% salary increase: ${(salary = salary + (salary * 5) / 100)}`);
+      }
+    </script>
+  </body>
+</html>

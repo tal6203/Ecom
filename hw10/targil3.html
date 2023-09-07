@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: fantasy;">
+    <select id="color" name="color">
+        <option disabled selected value> -- select an option -- </option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    <button type="button" onclick="change_color()">change color</button>
+    <p id="p1" style="font-size: 30px;">HELLO JAVA SCRIPT</p>
+    <script>
+        function change_color(){
+            const colors = document.getElementById("color").value;
+            const text = document.getElementById("p1");
+            if(colors == "red"){
+                text.style.color = "red";
+            }
+            else if(colors == "blue"){
+                text.style.color = "blue";
+            }
+            else if(colors == "green"){
+                text.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

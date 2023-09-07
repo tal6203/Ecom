@@ -1,0 +1,44 @@
+body{
+    background-color: PeachPuff;
+    
+    
+}
+label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pic{
+  text-align: center;
+}
+#ex7{
+
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+.bolt1{
+  background-color: gray;
+  padding: 7px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 50px;
+}
+.bolt2{
+  font-weight: bold;
+  background-color: gray;
+  padding: 7px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 50px;
+}
+#mult{
+  background-color: yellow;
+  padding: 7px;
+  text-align: center;
+  width: 40px;
+}
+#alert{
+  color: red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result_bouns1"></p>
+    <p id="result_bouns2"></p>
+    <script>
+     
+        let a = [[1 , 2 , 3],[4 , 5 , 6],[7 , 8 , 9]];
+        let b = [[10 , 11 , 12],[13 , 14 , 15],[16 , 17 , 18]];
+        let c = [[19 , 20 , 21],[22 , 23 , 24],[25 , 26 , 27]];
+        let obj = {matrix_1:a , matrix_2:b , matrix_3:c};
+        // print all
+        for(let x in obj){
+            for(let y in obj[x]){
+                for(let z in obj[x][y]){
+                    document.getElementById("result1").innerHTML += ` ${obj[x][y][z]}`;
+                }
+            }
+        }
+        // print only second property
+        for(let i = 0 ; i < obj.matrix_2.length ; i++){
+            document.getElementById("result2").innerHTML += ` ${obj.matrix_2[i]}`;
+        }
+      // bonus // 
+     
+     Object.values(obj).forEach((x) => {
+        x.forEach((y) => {
+            y.forEach((z) =>{
+                document.getElementById("result_bouns1").innerHTML += ` ${z}`;
+            });
+        });
+     });
+     // print only second property
+     obj.matrix_2.forEach((e) => {
+        document.getElementById("result_bouns2").innerHTML += ` ${e}`;
+     })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num = parseInt(prompt("Enter a Number: [enter -1 to exit]"));
+      var sum = 0;
+      while (num >= 0) {
+        save_num = num;
+        while (save_num != 0) {
+          sum = sum + (save_num % 10);
+          save_num = Math.floor(save_num / 10);
+        }
+        document.write(`The sum of ${num} is: ${sum}<br>`);
+        sum = 0;
+        num = parseInt(prompt("Enter a Number: [enter -1 to exit]"));
+      }
+      document.write("finished!");
+    </script>
+  </body>
+</html>

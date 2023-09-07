@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2>targil 1</h2>");
+      val = parseInt(prompt(""));
+      if (val < 0) {
+        document.write("Negative");
+      } else {
+        if (val == 0) {
+          document.write("Zero");
+        } else {
+          document.write("Positive");
+        }
+      }
+      document.write("<h2>targil 2</h2>");
+      num1 = parseInt(prompt("Enter a number #1:"));
+      num2 = parseInt(prompt("Enter a number #2:"));
+      num3 = parseInt(prompt("Enter a number #3:"));
+      if (num2 > num1 && num2 < num3) {
+        document.write("lncreasing");
+      }
+      document.write("<h2>targil 3</h2>");
+      num4 = parseInt(prompt("Enter a number #1:"));
+      num5 = parseInt(prompt("Enter a number #2:"));
+      num6 = parseInt(prompt("Enter a number #3:"));
+      if (num4 >= num5) {
+        if (num4 >= num6) {
+          document.write(`The biggest is: ${num4}`);
+        } else {
+          document.write(`The biggest is: ${num6}`);
+        }
+      } else {
+        if (num5 >= num6) {
+          document.write(`The biggest is: ${num5}`);
+        } else {
+          document.write(`The biggest is: ${num6}`);
+        }
+      }
+      document.write("<h2>targil 4</h2>");
+      num7 = parseInt(prompt("Enter a number:"));
+      s_num = num7;
+      mone = 0;
+      while (s_num != 0) {
+        s_num = Math.floor(s_num / 10);
+        mone++;
+      }
+      document.write(`The number of digits in the number ${num7} is: ${mone}`);
+      document.write("<h2>targil 5</h2>");
+      mas = 0;
+       salary = parseInt(prompt("Enter a salary:"));
+      if (salary <= 23000) {
+        mas = mas + (salary * 10) / 100;
+        document.write(`you need to pay: ${mas}`);
+      } else {
+        if (salary <= 46000) {
+          salary = salary - 23000;
+          mas = mas + 2300;
+          mas = mas + (salary * 20) / 100;
+          document.write(`you need to pay: ${mas}`);
+        } else {
+          if (salary <= 120000) {
+            mas = mas + 6900;
+            salary = salary - 46000;
+            mas = mas + (salary * 30) / 100;
+            document.write(`you need to pay: ${mas}`);
+          } else {
+            if (salary <= 220000) {
+              mas = mas + 29100;
+              salary = salary - 74000;
+              mas = mas + (salary * 40) / 100;
+              document.write(`you need to pay: ${mas}`);
+            } else {
+              mas = mas + 69100;
+              salary = salary - 220000;
+              mas = mas + (salary * 50) / 100;
+              document.write(`you need to pay: ${mas}`);
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

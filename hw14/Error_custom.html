@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Item:<input id="item" type="text" /> Quantity:<input
+      id="quantity"
+      type="number"
+    />
+    <button id="click" type="button">Click me</button>
+
+    <h2 id="my_shop"></h2>
+    <script>
+      let products1 = {
+        bannaa: 10,
+        Tomatoes: 20,
+        Oranges: 15,
+        cucumbers: 10,
+        onions: 25,
+      };
+      let my_shop = document.getElementById("my_shop");
+      my_shop.innerHTML = JSON.stringify(products1);
+
+      let my_click = document.getElementById("click");
+
+      function buyItem() {
+        let item = document.getElementById("item").value;
+        let quantity = parseInt(document.getElementById("quantity").value);
+        try {
+          if (products1[item] - quantity < 0) {
+            throw new Error(`There is not enough ${item}`);
+          } else if (products1[item] == undefined) {
+            throw new Error(`I don't have such a product`);
+          } else {
+            products1[item] -= quantity;
+            my_shop.innerHTML = JSON.stringify(products1);
+          }
+        } catch (error) {
+          alert(error);
+        }
+      }
+
+      my_click.addEventListener("click", buyItem);
+
+      // Bonus
+      let products2 = {
+        bannaa: 10,
+        Tomatoes: 20,
+        Oranges: 15,
+        cucumbers: 10,
+        onions: 25,
+      };
+      let buyItem = () => {
+        let item = document.getElementById("item").value;
+        let quantity = parseInt(document.getElementById("quantity").value);
+        try {
+          if (products2[item] - quantity < 0) {
+            throw new Error(`There is not enough ${item}`);
+          } else if (products2[item] == undefined) {
+            throw new Error(`I don't have such a product`);
+          } else {
+            products2[item] -= quantity;
+            my_shop.innerHTML = JSON.stringify(products2);
+          }
+        } catch (error) {
+          alert(error);
+        }
+      };
+
+      my_click.addEventListener("click", buyItem);
+    </script>
+  </body>
+</html>

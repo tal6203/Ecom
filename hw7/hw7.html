@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:coral;font-size: 25px;">
+    <h1>Taril#1</h1>
+    <label for="num1">Number#1:</label>
+    <input id="num1" type="number">
+    <button onclick="targil_1()">result</button>
+    <p id="result1"></p>
+    <hr>
+    <h1>Targil#2</h1>
+    <label for="num2">Number#2:</label>
+    <input id="num2" type="number">
+    <button onclick="targil_2()">result</button>
+    <p id="result2"></p>
+    <hr>
+    <h1>Targil#3</h1>
+    <label for="num3">Number#3:</label>
+    <input id="num3" type="number">
+    <button onclick="targil_3()">result</button>
+    <p id="result3"></p>
+    <hr>
+    <h1>Targil#4</h1>
+    <label for="num4">Number#4:</label>
+    <input id="num4" type="number"><br>
+    <label for="digit">Enter a digit:</label>
+    <input id="digit" type="number" min="0" max="9">
+    <button onclick="targil_4()">result</button>
+    <p id="result4"></p>
+    <hr>
+    <h1>Targil#5</h1>
+    <label for="num5">Number#5:</label>
+    <input id="num5" type="number">
+    <button onclick="targil_5()">result</button>
+    <p id="result5"></p>
+    <script>
+        function targil_1(){
+        var num = document.getElementById("num1").value;
+        while(num >= 10){
+            num=Math.floor(num/10);
+        }
+        document.getElementById("result1").innerHTML=`The left digit is: ${num}`;
+    }
+    function targil_2(){
+        var num = document.getElementById("num2").value;
+        var counter=0;
+        while(num != 0){
+            num=Math.floor(num/10);
+            counter++;
+        }
+        document.getElementById("result2").innerHTML=`The number of digits is: ${counter}`;
+    }
+    function targil_3(){
+        var num = document.getElementById("num3").value;
+        var sum = 0;
+        while(num != 0){
+            sum=sum+(num % 10);
+            num=Math.floor(num/10);
+        }
+        document.getElementById("result3").innerHTML=`The sum of the number is: ${sum}`;
+    }
+    function targil_4(){
+        var x = document.getElementById("num4").value;
+        var digit = document.getElementById("digit").value;
+        var counter = 0;
+        if(x == 0 && digit == 0){
+            counter=1;
+        }
+        else{
+        while(x != 0){
+            if(x % 10 == digit){
+                counter++;
+            }
+            x = Math.floor(x / 10);
+        }
+    }
+        document.getElementById("result4").innerHTML=`The number of ${digit} in the number ${document.getElementById("num4").value} is: ${counter}`;
+    }
+    function targil_5(){
+        var num = document.getElementById("num5").value;
+        var new_num = 0;
+        while(num != 0){
+            new_num = new_num * 10;
+            new_num = new_num + num % 10;
+            num=Math.floor(num / 10);
+        }
+        document.getElementById("result5").innerHTML=`The reverse of number is: ${new_num}`;
+    }
+    </script>
+</body>
+</html>

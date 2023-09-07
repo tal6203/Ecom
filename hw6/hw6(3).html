@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2>targil 2</h2>");
+      grade = parseInt(prompt("Enter a Grade:"));
+      if (grade < 55) {
+        document.write("בלתי מספיק");
+      } else {
+        if (grade < 65) {
+          document.write("מספיק");
+        } else {
+          if (grade < 75) {
+            document.write("כמעט טוב");
+          } else {
+            if (grade < 85) {
+              document.write("טוב");
+            } else {
+              if (grade < 95) {
+                document.write("טוב מאד");
+              } else {
+                document.write("מצויין");
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

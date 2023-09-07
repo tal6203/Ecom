@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        font-family: fantasy;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body style="font-family: fantasy">
+    <input id="num" type="number" />
+    <button type="button" onclick="add()">add</button>
+    <button type="button" onclick="check_show_num()">check</button>
+    <button type="button" onclick="Tosort()">To sort</button>
+    <p id="result" style="font-size: 30px"></p>
+    <script>
+      const list1 = [];
+      function add() {
+        let x = parseInt(document.getElementById("num").value);
+        let result = document.getElementById("result");
+        if (x > 0) {
+          list1.push(x);
+          result.innerHTML = list1;
+        } else if (x < 0) {
+          list1.unshift(x);
+          result.innerHTML = list1;
+        } else if (x == 0) {
+          let length = list1.length;
+          for (let i = 0; i < length; i++) {
+            list1.pop();
+          }
+          result.innerHTML = list1;
+        }
+      }
+      function check_show_num() {
+        let x = parseInt(document.getElementById("num").value);
+        let counter = 0;
+        for (let i = 0; i < list1.length; i++) {
+          if (list1[i] == x) {
+            counter++;
+          }
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `The number ${x} appears in the array ${counter} times`;
+      }
+      function Tosort() {
+        document.getElementById("result").innerHTML = list1.sort(function (a,b) {return a - b;});
+      }
+    </script>
+  </body>
+</html>

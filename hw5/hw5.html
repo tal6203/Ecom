@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2>targil 1 </h2>");
+      x = parseInt(prompt());
+      y = parseInt(prompt());
+      z = parseInt(prompt());
+      document.write("The sum of number: "+ (x + y + z));
+      document.write("<br/>");
+      document.write("The average: "+(x + y + z) / 3);
+      
+      document.write("<h2>targil 2 </h2>");
+      len = parseInt(prompt());
+      wid = parseInt(prompt());
+      document.write("The surface is:" + (len * wid));
+      document.write("<br/>");
+      document.write("The scope is:"+((len*2)+(wid*2)));
+
+      document.write("<h2>targil 4 </h2>");
+      len_of_movie= parseInt(prompt());
+      hour =Math.floor (len_of_movie / 60);
+      document.write(hour+" hour(s) and "+len_of_movie%60+" minute(s)");
+      
+      document.write("<h2>targil 5 </h2>");
+      ahadot= parseInt(prompt());
+      document.write("The ahadot digit is: "+ahadot%10);
+      
+      document.write("<h2>targil 6 </h2>");
+      num1= parseInt(prompt());
+      document.write("The asharot digit is: "+ Math.floor((num1%100)/10));
+      
+      document.write("<h2>targil 7 </h2>");
+      num2 = parseInt(prompt());
+      document.write("The meot digit is: "+Math.floor(num2/100));
+      
+      document.write("<h2>targil 8 </h2>");
+      num3 =  parseInt(prompt());
+      document.write("The sum of digit is: "+(Math.floor(num3/10)+ num3 % 10));
+    
+      document.write("<h2>targil 9 </h2>");
+      num4 =  parseInt(prompt());
+      new_num=((num4 % 10)*10)+Math.floor(num4/10);
+      document.write("The new number is: " + new_num); 
+
+      document.write("<h2>class work</h2>");
+      num = parseInt(prompt());
+      document.write(num >= 0);
+      document.write("<br>");
+      document.write(num > 9 && num < 100);
+      document.write("<br>");
+      document.write(num % 10);
+    
+    </script>
+  </body>
+</html>

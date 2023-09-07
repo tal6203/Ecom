@@ -1,0 +1,21 @@
+Table Books{
+  id bigint
+  title varchar
+  author varchar
+  publish_year integer
+  price float
+  left_in_stock integer
+  book_image_src varchar
+}
+
+Table Order {
+  id bigint
+  book_id bigint
+  how_many integer
+  time_of_order datetime
+  customer_fname varchar
+  customer_lname varchar
+  credit_card varchar
+}
+
+Ref: "Books"."id" < "Order"."book_id"
